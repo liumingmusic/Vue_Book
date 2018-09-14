@@ -1,0 +1,83 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: calc(100vw);
+    transform: translateY(33%);
+    margin: 0 auto;
+}
+
+.canvas {
+    display: block;
+    margin: 0 auto;
+}
+
+.handler {
+    width: calc(100vw);
+    height: 50px;
+}
+
+.handler .change-color {
+    display: list-item;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.handler .clear-canvas {
+    display: block;
+    width: 60px;
+    height: 30px;
+    border: 1px solid black;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 15px;
+    margin-top: 8px;
+    border-radius: 3px;
+    background: #4c45e4;
+    color: white;
+    cursor: pointer;
+}
+
+.change-color .color {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    float: left;
+    margin-left: 15px;
+    margin-top: 11px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.change-color .color:not(.selected):hover {
+    box-shadow: 0 0 3px 3px #8e47de;
+}
+
+.change-color .color.red {
+    background-color: red;
+}
+
+.change-color .color.blue {
+    background-color: blue;
+}
+
+.change-color .color.yellow {
+    background-color: yellow;
+}
+
+.change-color .color.black {
+    background-color: black;
+}
+
+.change-color .color.gray {
+    background-color: gray;
+}
+
+.change-color .color.selected {
+    box-shadow: 0 0 3px 3px #8e47de;
+}

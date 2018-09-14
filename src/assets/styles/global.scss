@@ -1,0 +1,77 @@
+@import "reset";
+// 1rem = fontsize px
+// 1px = (1 / fontsize) rem
+$fontsize: 37.5;
+
+@function px2rem($px) {
+  @return ($px / $fontsize)+rem;
+}
+
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  color: #333;
+  font-size: px2rem(20);
+}
+
+.silde-up-enter-to,
+.silde-up-leave,
+.silde-down-enter-to,
+.silde-down-leave {
+  transform: translate3d(0, 0, 0);
+}
+
+.silde-up-enter-active,
+.silde-up-leave-active,
+.silde-down-enter-active,
+.silde-down-leave-active,
+.fade-enter-active,
+.fade-leave-active,
+.fade-enter-active,
+.fade-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.3s linear;
+}
+
+.silde-up-enter,
+.silde-up-leave-to {
+  transform: translate3d(0, px2rem(108), 0);
+}
+
+.silde-down-enter,
+.silde-down-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.fade-enter,
+.fade-up-leave-to {
+  opacity: 10;
+}
+
+.fade-enter-to,
+.fade-up-leave {
+  opacity: 1;
+}
+
+// 目录弹出框过渡动画
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+  transform: translate3d(-100%, 0, 0);
+}
