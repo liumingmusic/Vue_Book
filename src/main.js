@@ -5,8 +5,12 @@ import App from './App'
 import router from './router'
 import '@/assets/styles/icon.css'
 import '@/assets/styles/global.scss'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
+
+Vue.use(ElementUI);
 
 /* eslint-disable no-new */
 new Vue({
